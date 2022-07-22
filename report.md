@@ -22,6 +22,8 @@ Unlike the previous project, in this project Udacity has provided us with a lot 
 
 We can combine this with the Actor-Critic method outlined in Project 2, using a `ddpg_agent.py` (actually should be *ma*ddpg) file which calls to an `Actor()` and `Critic()` which we create in `model.py`. We can make further modifications that we have used in previous projects. For example, the Ornstein-Uhlenbeck process, the replay buffer & experience replay, and gradient clipping from project 2 all should be usable for this projects, and I have no reason *not* to use them. For this reason, to begin with we will copy the `model.py` file from my 2nd project. 
 
+In order to get this code to run and fulfil the requirements of the project, we need to have 2 Agents. However, our existing code uses only 1 `Agent` class, and therefore we need a convenient way to create a 2nd Agent with minimal changes to the code. We can do this by creating a new Class called a `DoubleAgent`, which will create 2 agents for us, and will inherit attributes from `Agent` (the Udacity-provided code includes a `super()` line allowing this to be done more easily). 
+
 -------
 
 # Initial run 
