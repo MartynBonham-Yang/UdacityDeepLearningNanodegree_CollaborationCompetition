@@ -78,7 +78,7 @@ For the successful model, we can see that the model does not go through an ever-
 
 ### Explanation of model architecture
 
-For this project, I used the same sort of neural network as was used for the previous project. That is, I used 3 fully-connected layers with ReLu activation and a single Batch Normalisation layer for both the `Actor()` and `Critic()` networks. I used an input dimension of 256; I had intended to change this if it ever became necessary but as my model reached a successful conclusion before I got to this point I did not modify these values. 256 was chosen because it was the value I had intended to use last project (but in that project I reduced to 128). With the random seed value, I initially thought to use the date the same as I have done in previous work (that is, `seed = 20220808` or something like this) but I overlooked this and ran my code without modifying the value from 1. It did not have much effect on my model performance of course! 
+For this project, I used the same sort of neural network as was used for the previous project. That is, I used 3 fully-connected `Linear` layers with ReLu activation and a single Batch Normalisation layer for both the `Actor()` and `Critic()` networks. I used a value of 256 units for every Linear layer; I had intended to change this if it ever became necessary but as my model reached a successful conclusion before I got to this point I did not modify these values.
 
 The Actor and Critic learning rates remain the same as I used for my previous project, with values of $10e^-04$ and $10e^-03$ respectively. I did not need to modify these.  As mentioned above I also did not modify the discount rate, instead choosing to keep the Udacity-recommended default value. 
 
